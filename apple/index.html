@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		<META NAME=”ROBOTS” CONTENT=”NOIMAGEINDEX”>
+		<title>Pixave License for Apple Employees</title>
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+		<script type="text/javascript">
+				$(document).ready(function()
+				{
+						$('.fancybox').fancybox();
+			
+						// Change title type, overlay closing speed
+						$(".fancybox-effects-a").fancybox({
+							helpers: {
+								title : {
+									type : 'outside'
+								},
+								overlay : {
+									speedOut : 0
+								}
+							}
+						});
+			
+						// Disable opening and closing animations, change title type
+						$(".fancybox-effects-b").fancybox({
+							openEffect  : 'none',
+							closeEffect	: 'none',
+			
+							helpers : {
+								title : {
+									type : 'over'
+								}
+							}
+						});
+			
+						// Set custom style, close if clicked, change title type and overlay color
+						$(".fancybox-effects-c").fancybox({
+							wrapCSS    : 'fancybox-custom',
+							closeClick : true,
+			
+							openEffect : 'none',
+			
+							helpers : {
+								title : {
+									type : 'inside'
+								},
+								overlay : {
+									css : {
+										'background' : 'rgba(238,238,238,0.85)'
+									}
+								}
+							}
+						});
+			
+						// Remove padding, set opening and closing animations, close if clicked and disable overlay
+						$(".fancybox-effects-d").fancybox({
+							padding: 0,
+			
+							openEffect : 'elastic',
+							openSpeed  : 150,
+			
+							closeEffect : 'elastic',
+							closeSpeed  : 150,
+			
+							closeClick : true,
+			
+							helpers : {
+								overlay : null
+							}
+						});
+			
+						$('.fancybox-buttons').fancybox({
+							openEffect  : 'none',
+							closeEffect : 'none',
+			
+							prevEffect : 'none',
+							nextEffect : 'none',
+			
+							closeBtn  : false,
+			
+							helpers : {
+								title : {
+									type : 'inside'
+								},
+								buttons	: {}
+							},
+			
+							afterLoad : function() {
+								this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+							}
+						});
+		
+						$('.fancybox-media')
+							.attr('rel', 'media-gallery')
+							.fancybox({
+								openEffect : 'none',
+								closeEffect : 'none',
+								prevEffect : 'none',
+								nextEffect : 'none',
+			
+								arrows : false,
+								helpers : {
+									media : {},
+									buttons : {}
+								}
+							});
+						});
+			</script>
+	</head>
+
+	<body>
+		<p></p>
+	    <section class="body">
+	    	<a href="http://www.littlehj.com"><img src="../old/images/pixave-title.png" width="900px" height="190px" alt="" /></a>
+	    	<!-- Video Play -->
+	    	<div class="video-container">
+	    		<iframe src="https://www.youtube.com/embed/5lFzMiC9gXk?version=3&vq=hd1080&autoplay=0" frameborder="0"></iframe>
+	    	</div>
+	    	<h1 class="title">Pixave License for Apple Employees</h1>
+	    	<p>Free Pixave license is available to all Apple employees. Simply enter your <strong>apple.com</strong>, <strong>euro.apple.com</strong>, <strong>asia.apple.com</strong> email address, along with your name and a free license will be emailed to you.</p>
+	    	<p>We hope you enjoy using Pixave</p>
+	    	<p>If you have any suggestions or questions, Please email to <a href="mailto:support@littlehj.com">support@littlehj.com</a> or tweet us <a href="http://twitter.com/pixaveapp" target="_blank">@pixaveapp</a>.</p>
+		    <form action="form.php" method="post" enctype="multipart/form-data">
+			    <label></label>
+			    <input name="name" required="required" placeholder="Your Name">
+			            
+			    <label></label>
+			    <input name="email" type="email" required="required" placeholder="@apple.com">
+			    
+			    <input id="submit" name="submit" type="submit" value="Request NFR License">
+		        
+		    </form>
+			<footer>
+				<p>&copy;2016 <a href="http://www.littlehj.com" target="_blank">LittleHJ</a>. All rights reserved.<br></p>
+			</footer>
+	    </section>
+	</body>
+</html>

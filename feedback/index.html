@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		<META NAME=”ROBOTS” CONTENT=”NOIMAGEINDEX”>
+		<title>Pixave Feedback</title>
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+		<script type="text/javascript">
+				$(document).ready(function()
+				{
+						$('.fancybox').fancybox();
+			
+						// Change title type, overlay closing speed
+						$(".fancybox-effects-a").fancybox({
+							helpers: {
+								title : {
+									type : 'outside'
+								},
+								overlay : {
+									speedOut : 0
+								}
+							}
+						});
+			
+						// Disable opening and closing animations, change title type
+						$(".fancybox-effects-b").fancybox({
+							openEffect  : 'none',
+							closeEffect	: 'none',
+			
+							helpers : {
+								title : {
+									type : 'over'
+								}
+							}
+						});
+			
+						// Set custom style, close if clicked, change title type and overlay color
+						$(".fancybox-effects-c").fancybox({
+							wrapCSS    : 'fancybox-custom',
+							closeClick : true,
+			
+							openEffect : 'none',
+			
+							helpers : {
+								title : {
+									type : 'inside'
+								},
+								overlay : {
+									css : {
+										'background' : 'rgba(238,238,238,0.85)'
+									}
+								}
+							}
+						});
+			
+						// Remove padding, set opening and closing animations, close if clicked and disable overlay
+						$(".fancybox-effects-d").fancybox({
+							padding: 0,
+			
+							openEffect : 'elastic',
+							openSpeed  : 150,
+			
+							closeEffect : 'elastic',
+							closeSpeed  : 150,
+			
+							closeClick : true,
+			
+							helpers : {
+								overlay : null
+							}
+						});
+			
+						$('.fancybox-buttons').fancybox({
+							openEffect  : 'none',
+							closeEffect : 'none',
+			
+							prevEffect : 'none',
+							nextEffect : 'none',
+			
+							closeBtn  : false,
+			
+							helpers : {
+								title : {
+									type : 'inside'
+								},
+								buttons	: {}
+							},
+			
+							afterLoad : function() {
+								this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+							}
+						});
+		
+						$('.fancybox-media')
+							.attr('rel', 'media-gallery')
+							.fancybox({
+								openEffect : 'none',
+								closeEffect : 'none',
+								prevEffect : 'none',
+								nextEffect : 'none',
+			
+								arrows : false,
+								helpers : {
+									media : {},
+									buttons : {}
+								}
+							});
+						});
+			</script>
+	</head>
+
+	<body>
+		<p></p>
+	    <section class="body">
+	    	<a href="http://www.littlehj.com"><img src="../old/images/pixave-title.png" width="900px" height="190px" alt="" /></a>
+	    	<h1 class="title">Pixave Feedback</h1>
+	    	<p>Your feedback is valuable to us. If you want to request a feature, or report a bug, we’re more than happy to help.</br>we’ll get back to you as soon as possible.</p>
+	    	
+		    <form action="form.php" method="post" enctype="multipart/form-data">
+			    <label></label>
+			    <input name="name" required="required" placeholder="Your full name">
+			            
+			    <label></label>
+			    <input name="email" type="email" required="required" placeholder="Your email">
+			    
+			    <label></label>
+			    <textarea name="content" type="content" required="required" placeholder="Your message"></textarea>
+			    
+			    <input id="submit" name="submit" type="submit" value="Send Your Feedback">
+		        
+		    </form>
+			<footer>
+				<p>&copy;2003-2017 <a href="http://www.littlehj.com">LittleHJ</a>. All rights reserved.<br></p>
+			</footer>
+	    </section>
+	</body>
+</html>
